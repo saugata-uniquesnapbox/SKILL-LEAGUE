@@ -1,0 +1,207 @@
+/* Main Styles */
+:root {
+  /* Colors */
+  --color-primary: #5D3BE7;
+  --color-primary-light: #7C5DF9;
+  --color-primary-dark: #4A2FC2;
+  --color-secondary: #1EAEFF;
+  --color-secondary-light: #4BBFFF;
+  --color-secondary-dark: #0D8CD8;
+  --color-accent: #FF3E7F;
+  --color-accent-light: #FF6E9D;
+  --color-accent-dark: #D92D68;
+  
+  --color-success: #00C875;
+  --color-warning: #FFCB47;
+  --color-error: #FF5252;
+  
+  --color-gray-100: #F8F9FA;
+  --color-gray-200: #E9ECEF;
+  --color-gray-300: #DEE2E6;
+  --color-gray-400: #CED4DA;
+  --color-gray-500: #ADB5BD;
+  --color-gray-600: #6C757D;
+  --color-gray-700: #495057;
+  --color-gray-800: #343A40;
+  --color-gray-900: #212529;
+  
+  --color-background: #0F1621;
+  --color-card-bg: #18202D;
+  --color-card-bg-hover: #1F2A3C;
+  
+  /* Typography */
+  --font-primary: 'Montserrat', sans-serif;
+  
+  /* Spacing - 8px grid system */
+  --space-1: 0.8rem;
+  --space-2: 1.6rem;
+  --space-3: 2.4rem;
+  --space-4: 3.2rem;
+  --space-5: 4.0rem;
+  --space-6: 4.8rem;
+  --space-7: 5.6rem;
+  --space-8: 6.4rem;
+  
+  /* Borders */
+  --border-radius-sm: 0.4rem;
+  --border-radius-md: 0.8rem;
+  --border-radius-lg: 1.6rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+body {
+  background-color: var(--color-background);
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+/* Typography */
+h1, .h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+}
+
+h2, .h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+h3, .h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+h4, .h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-large {
+  padding: var(--space-2) var(--space-4);
+  font-size: 1.8rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  box-shadow: 0 0.4rem 1.2rem rgba(93, 59, 231, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 0.6rem 1.6rem rgba(93, 59, 231, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  color: white;
+  box-shadow: 0 0.4rem 1.2rem rgba(30, 174, 255, 0.3);
+}
+
+.btn-tertiary:hover {
+  background: linear-gradient(135deg, var(--color-secondary-light), var(--color-secondary));
+  transform: translateY(-2px);
+  box-shadow: 0 0.6rem 1.6rem rgba(30, 174, 255, 0.4);
+}
+
+/* Section styles */
+section {
+  padding: var(--space-6) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.section-title {
+  color: white;
+  margin-bottom: var(--space-1);
+}
+
+.section-subtitle {
+  color: var(--color-gray-400);
+  font-size: 1.8rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.view-all-wrapper {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+/* Icons (using basic CSS shapes for demo) */
+.icon-twitter, .icon-facebook, .icon-instagram, .icon-discord, .icon-youtube {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: white;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}

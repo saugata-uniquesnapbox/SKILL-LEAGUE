@@ -1,0 +1,206 @@
+/* Responsive Styles */
+
+/* Mobile First approach */
+/* Base styles are for mobile, then we scale up */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  html {
+    font-size: 65%; /* Slightly increase base font size */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  
+  .hero-title {
+    font-size: 5.5rem;
+  }
+  
+  .tournament-card {
+    grid-column: span 6;
+  }
+  
+  .news-card {
+    grid-column: span 6;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 62.5%; /* Reset to default 1rem = 10px */
+  }
+  
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .tournament-card {
+    grid-column: span 3;
+  }
+  
+  .news-card {
+    grid-column: span 4;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Extra extra large devices (TV, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Mobile and tablet breakpoints */
+@media (max-width: 991px) {
+  .main-nav {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .news-card.featured {
+    grid-column: span 12;
+    grid-template-columns: 1fr;
+  }
+  
+  .news-card.featured .news-image {
+    height: 25rem;
+  }
+  
+  .tournaments-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-title {
+    font-size: 3rem;
+  }
+  
+  .cta-text {
+    font-size: 1.8rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .filter-btn {
+    font-size: 1.4rem;
+    padding: 0.6rem var(--space-1);
+  }
+  
+  .tournament-filters {
+    gap: 0.5rem;
+  }
+  
+  .tournament-card {
+    margin: 0 var(--space-2);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .cta-title {
+    font-size: 2.6rem;
+  }
+  
+  .cta-text {
+    font-size: 1.6rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+  }
+  
+  .partners-slider {
+    justify-content: center;
+  }
+  
+  .hero-section {
+    min-height: 50rem;
+  }
+  
+  .news-card, .news-card.featured {
+    margin: 0 var(--space-2);
+  }
+}
+
+/* Height-based media queries for better mobile experience */
+@media (max-height: 700px) {
+  .hero-section {
+    min-height: 45rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 45rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillLeague - Login / Signup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0F1621;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .toggle-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 25px;
+    }
+
+    .toggle-buttons button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-buttons button.active {
+      border-color: #1EAEFF;
+      font-weight: 600;
+    }
+
+    form {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    form.active {
+      display: block;
+    }
+
+    h3 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    label {
+      color: #fff;
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.07);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    ::placeholder {
+      color: #ccc;
+    }
+
+    button.submit-btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #fff;
+      color: #080710;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .social {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social div {
+      flex: 1 1 45%;
+      padding: 10px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #eaf0fb;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .social div:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive Media Queries */
+    @media screen and (max-width: 480px) {
+      h3 {
+        font-size: 20px;
+      }
+
+      .toggle-buttons button {
+        font-size: 16px;
+      }
+
+      button.submit-btn {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      input {
+        font-size: 13px;
+      }
+
+      label {
+        font-size: 13px;
+      }
+
+      .social div {
+        font-size: 13px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="toggle-buttons">
+      <button id="loginToggle" class="active">Login</button>
+      <button id="signupToggle">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="active">
+      <h3>Login to SkillLeague</h3>
+      <label for="loginEmail">Email or Phone</label>
+      <input type="text" id="loginEmail" placeholder="Enter your email or phone" required>
+
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+      <button type="submit" class="submit-btn">Login</button>
+
+      <div class="social">
+        <div><i class="fab fa-google"></i> Google</div>
+        <div><i class="fab fa-facebook"></i> Facebook</div>
+      </div>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm">
+      <h3>Create Your Account</h3>
+      <label for="signupEmail">Email</label>
+      <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+      <label for="signupPassword">Password</label>
+      <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+      <label for="signupConfirm">Confirm Password</label>
+      <input type="password" id="signupConfirm" placeholder="Confirm your password" required>
+
+      <button type="submit" class="submit-btn">Sign Up</button>
+
+      <div class="social">
+        <div><i class="fab fa-google"></i> Google</div>
+        <div><i class="fab fa-facebook"></i> Facebook</div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const loginToggle = document.getElementById('loginToggle');
+    const signupToggle = document.getElementById('signupToggle');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    loginToggle.addEventListener('click', () => {
+      loginToggle.classList.add('active');
+      signupToggle.classList.remove('active');
+      loginForm.classList.add('active');
+      signupForm.classList.remove('active');
+    });
+
+    signupToggle.addEventListener('click', () => {
+      signupToggle.classList.add('active');
+      loginToggle.classList.remove('active');
+      signupForm.classList.add('active');
+      loginForm.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
