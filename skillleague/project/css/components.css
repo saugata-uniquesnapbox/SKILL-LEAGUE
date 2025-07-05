@@ -213,6 +213,16 @@
 .mobile-btn {
   width: 100%;
 }
+
+/* Only show dropdown when .open is present */
+.mobile-dropdown-menu {
+  display: none;
+}
+.mobile-dropdown-menu.open {
+  display: block;
+}
+
+
 @media (max-width: 450px) {
   .header-actions .btn-primary {
     display: none !important;

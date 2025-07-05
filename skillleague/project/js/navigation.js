@@ -86,3 +86,31 @@ function initNavigation() {
     });
   });
 }
+
+
+
+
+// ...existing code...
+
+// Mobile dropdown toggle
+document.querySelectorAll('.mobile-dropdown-trigger').forEach(trigger => {
+  trigger.addEventListener('click', function () {
+    const menu = this.nextElementSibling;
+    if (menu && menu.classList.contains('mobile-dropdown-menu')) {
+      menu.classList.toggle('open');
+    }
+  });
+});
+
+// Optional: Close other dropdowns when one is opened
+document.querySelectorAll('.mobile-dropdown-trigger').forEach(trigger => {
+  trigger.addEventListener('click', function () {
+    document.querySelectorAll('.mobile-dropdown-menu').forEach(menu => {
+      if (menu !== this.nextElementSibling) {
+        menu.classList.remove('open');
+      }
+    });
+  });
+});
+
+// ...existing code...

@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <style>
@@ -68,6 +70,40 @@
     </div>
   </header>
  
+  
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-content">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-dropdown">
+          <span class="mobile-dropdown-trigger">Tournaments <span class="dropdown-icon">▾</span></span>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="Tournaments.html">Upcoming Events</a></li>
+            <li><a href="Tournaments.html">Past Events</a></li>
+            <li><a href="#">Rules & Guidelines</a></li>
+          </ul>
+        </li>
+        <li class="mobile-dropdown">
+          <span class="mobile-dropdown-trigger">Games <span class="dropdown-icon">▾</span></span>
+          <ul class="mobile-dropdown-menu">
+            <li><a href="registration.html">Bgmi</a></li>
+            <li><a href="registration.html">Free Fire</a></li>
+            <li><a href="registration.html">Chess</a></li>
+            <!-- <li><a href="#">Fortnite</a></li> -->
+            <li><a href="registration.html">All Games</a></li>
+          </ul>
+        </li>
+        <li><a href="Tournaments.html">News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="login.html" class="btn btn-primary mobile-btn">Sign Up</a>
+        <a href="login.html" class="btn btn-secondary mobile-btn">Log In</a>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -297,7 +333,7 @@ margin-top: 5rem
             <span class="logo-text">Skill<span class="logo-highlight">league</span></span>
           </div>
           <p class="footer-description">The next generation of competitive gaming platforms, connecting players and communities worldwide.</p>
-           <div class="social-links">
+      <div class="social-links">
   <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
   <a href="" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
   <a href="" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -347,5 +383,9 @@ margin-top: 5rem
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/animations.js"></script>
+</body>
   </body>
 </html>
