@@ -29,11 +29,11 @@
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   html {
     font-size: 62.5%; /* Reset to default 1rem = 10px */
-  }
+  /* }
   
   .hero-title {
     font-size: 6rem;
@@ -46,7 +46,7 @@
   .news-card {
     grid-column: span 4;
   }
-}
+} */ 
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

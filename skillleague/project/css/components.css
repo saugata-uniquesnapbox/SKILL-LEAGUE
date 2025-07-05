@@ -213,124 +213,102 @@
 .mobile-btn {
   width: 100%;
 }
+@media (max-width: 450px) {
+  .header-actions .btn-primary {
+    display: none !important;
+  }
+}
 
-/* Hero Section */
-/* .hero-section {
+
+/* hero section */
+
+.carousel {
   position: relative;
-  height: 100vh;
-  min-height: 60rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
+  border-radius: 16px;
+  margin-top: 5rem;
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.12); */
+  /* background: #fff; */
 }
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bgmi.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-.hero-content {
-  max-width: 80rem;
-  padding: 0 var(--space-2);
-  z-index: 2;
-}
-
-.hero-title {
-  font-size: 6rem;
-  font-weight: 800;
-  margin-bottom: var(--space-2);
-  background: linear-gradient(135deg, #ffffff, var(--color-primary-light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0.2rem 3rem rgba(93, 59, 231, 0.5);
-}
-
-.hero-subtitle {
-  font-size: 2.2rem;
-  margin-bottom: var(--space-4);
-  color: var(--color-gray-300);
-}
-
-.hero-buttons {
+.carousel-track {
   display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-} */
-
-
-
-.carousel_items {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
 }
-.carousel_item {
-  position: relative;
+.carousel-slide {
   min-width: 100%;
-  height: 100vh;
-  transition: all 0.5s linear;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
 }
-.carousel_text {
+.carousel-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+.caption { 
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-shadow: 1px 1px black;
-  font-size: calc(1.5rem + 0.3vw);
-  font-weight: bolder;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  /* color: #fff; */
+  /* background: rgba(0,0,0,0.4); */
+  padding: 16px;
+  font-size: 1.5rem;
+  border-radius: 0 0 16px 16px;
 }
-
-.item1 {
-  background-image: url("../images/sribhumi.jpg");
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background: rgba(0,0,0,0.5); */
+  /* color: #fff; */
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.2s;
 }
-.item2 {
-  background-image: url("../images/bgmi.png");
+.carousel-btn.prev { left: 16px; }
+.carousel-btn.next { right: 16px; }
+.carousel-btn:hover { background: rgba(0,0,0,0.7); }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 8px 0;
+  gap: 8px;
 }
-.item3 {
-  background-image: url("../images/bgmi.jpg");
+.carousel-dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
 }
-.item4 {
-  background-image: url("../images/bgmi.png");
+.carousel-dots .active {
+  background: #333;
 }
-.item5 {
-  background-image: url("../images/bgmi.jpg");
-}
-@media screen and (max-width: 768px) {
-  .carousel_item {
-    height: 80vh;
+@media (max-width: 600px) {
+  .carousel-slide img {
+    height: 180px;
   }
-
-  .carousel_text {
-    font-size: calc(1rem + 0.5vw);
-    padding: 0.5rem 1rem;
-  }
-}
-
-/* Small devices */
-@media screen and (max-width: 480px) {
-  .carousel_text {
+  .caption {
     font-size: 1rem;
-    bottom: 8%;
-    padding: 0.4rem 0.8rem;
+    padding: 8px;
+  }
+  .carousel {
+    width: 98vw;
   }
 }
+
+
 
 /* Tournament Cards */
 .tournament-filters {
@@ -338,7 +316,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-1);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .hidden {
@@ -429,6 +407,17 @@
   margin-bottom: var(--space-2);
   color: var(--color-gray-300);
 }
+.tournaments-section{
+  margin-top: 2rem;
+}
+
+@media (max-width: 450px) {
+  .tournaments-section {
+    margin-top: -5rem;
+  }
+}
+
+
 
 /* News Cards */
 .news-grid {
@@ -530,6 +519,96 @@
   color: var(--color-secondary);
 }
 
+/* ...existing code... */
+
+@media (max-width: 460px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .news-card,
+  .news-card.featured {
+    grid-column: span 12;
+    display: block;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  .news-card.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image,
+  .news-card.featured .news-image {
+    height: 160px;
+  }
+
+  .news-title,
+  .news-card.featured .news-title {
+    font-size: 1.3rem;
+  }
+
+  .news-content {
+    padding: var(--space-1);
+  }
+
+  .news-meta {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+/* ...existing code... */
+
+/* ...existing code... */
+
+@media (max-width: 756px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .news-card,
+  .news-card.featured {
+    grid-column: span 12;
+    display: block;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  .news-card.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image,
+  .news-card.featured .news-image {
+    height: 180px;
+  }
+
+  .news-title,
+  .news-card.featured .news-title {
+    font-size: 1.5rem;
+  }
+
+  .news-content {
+    padding: var(--space-1);
+  }
+
+  .news-meta {
+    font-size: 1.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+/* ...existing code... */
+
+
+
 /* Partners Section */
 .partners-section {
   background-color: rgba(255, 255, 255, 0.03);
@@ -582,7 +661,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/cta-bg.jpg') center center/cover;
+  background: url('../images/bgmi.png') center center/cover;
   opacity: 0.1;
   z-index: 0;
 }
